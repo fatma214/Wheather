@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Weather</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg bg-dark py-4">
+    <div class="container-fluid ">
+
+      <a class="navbar-brand text-white ms-5  px-5 d-flex justify-content-between" href="#">
+        <div class="logo"> <img class="w-100" src="images/logo@2x.png" alt=""></div>
+
+        <div class="ms-3">
+          <p class="mb-0">
+            Weather
+          </p>
+          <p class="small ">
+            tagline goes here
+          </p>
+
+        </div>
+      </a>
+
+      <button class="navbar-toggler bg-white" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto ps-5    ms-auto">
+          <li class="nav-item">
+            <a id="homeLink" class="nav-link text-white   active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white  " href="#">News</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white  " href="#">Live Cameras</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white " href="#">Photos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#">Contact</a>
+          </li>
+
+        </ul>
+      </div>
+
+    </div>
+  </nav>
+
+  <div class="weatherImg">
+
+
+    <div class="w-75 m-auto pt-5 position-relative">
+      <input id="locationInput" type="text" class="form-control rounded-pill bg-dark p-3 mt-4 text-white"
+        placeholder="Find your location...">
+      <button type="text" id="btnFind" class=" btn-find rounded-pill px-5 py-2 ">Find</button>
+    </div>
+
+    <div class="w-75 m-auto forecast-container">
+      <div class="row g-0">
+        <div class="col-md-4 today">
+          <div class="container">
+            <div class="row px-1 py-2 todayHeader">
+              <div class="col-md-8 " id="day"></div>
+              <div class="col-md-4" id="date"></div>
+            </div>
+          </div>
+
+          <div class="ps-4 forecast-content ">
+
+            <div class="row pt-3">
+              <div class="col-md-12" id="name"></div>
+            </div>
+
+            <div class="row ">
+              <div class="col-md-8 num text-white "><span id="tempC"></span><sup>o</sup>C</div>
+              <div class="col-md-4 d-flex align-items-center ps-3">
+                <img id="iconImg"   alt="">
+              </div>
+            </div>
+
+
+            <div class="row">
+              <span id="weatherCondition" class="col-md-12 custom">
+             
+              </span>
+            </div>
+
+
+
+            <div class="row px-3 py-4">
+              <span class="col-md-1">
+                <img width="20px" src="images/icon-umberella@2x.png" alt="">
+              </span>
+              <span class="col-md-2"> 20%</span>
+              <span class="col-md-1">
+                <img width="20px" src="images/icon-wind@2x.png" alt="">
+              </span>
+              <span class="col-md-3">18km/h</span>
+              <span class="col-md-1">
+                <img width="20px" src="images/icon-compass@2x.png" alt="">
+              </span>
+              <span class="col-md-2"> East</span>
+
+
+            </div>
+
+          </div>
+
+
+        </div>
+
+        
+        <div class="col-md-4  text-center tomorrow  ">
+          <div class="container">
+            <div class="row px-1 py-2 tomorrowHeader">
+              <div class="col-md-12" id="tomorrowHeader"></div>
+            </div>
+          </div>
+
+          <div class="px-5 forecast-content pb-5">
+            <div class="row py-3">
+              <div class="col-md-12 pt-4"><img  id="tomorrowImg" src="" alt=""></div>
+              <div class="col-md-12 pt-4 text-white degr"><span id="tomorrowmaxtemp_c"></span><sup>o</sup>C</div>
+              <div class="col-md-12"><span id="tomorrowmintemp_c"></span><sup>o</sup></div>
+              <div class="col-md-12 custom " id="tomorrowText"></div> 
+            </div>
+          </div>
+
+
+        </div>
+        <div class="col-md-4 text-center thirdDay">
+          <div class="container">
+            <div class="row px-1  py-2  thirdDayHeader ">
+              <div class="col-md-12" id="thirdDayHeader"></div>
+            </div>
+          </div>
+
+          <div class="px-5 forecast-content  pb-5">
+
+            <div class="row py-3">
+              <div class="col-md-12 pt-4"><img id="thirdDayImg" src="images/logo@2x.png" alt=""></div>
+              <div class="col-md-12 pt-4 degr"><span id="thirdDayMax"></span><sup>o</sup>C</div>
+              <small><span id="thirdDayMin"></span><sup>o</sup></small>
+            </div>
+
+            <div class="row">
+              <span id="thirdDayText" class="col-md-12 custom">
+                
+              </span>
+            </div>
+
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+  <footer>
+    <div class="w-75 m-auto ">
+      <div class="row pt-5">
+        <div class="col-md-9">
+          <div class=" position-relative">
+            <input id="locationInput" type="text" class="form-control rounded-pill bg-dark p-3"
+              placeholder="enter your email to subscribe...">
+            <button type="text" class="d-none d-sm-block btn-find rounded-pill px-5 py-2 ">subscribe</button>
+          </div>
+          <p class="copyRight my-4">Copyright 2014 Company name. Designed by Themezy. All rights reserved</p>
+        </div>
+
+        <div class="col-md-4 ">
+          <div class="social-links d-flex ps-md-5 ps-sm-0">
+            <a href="#" class="text-decoration-none">
+              <div class="iconBorder bg-dark">
+                <i class="fa-brands fa-facebook-f   py-3"></i>
+              </div>
+            </a>
+            <a href="#" class="text-decoration-none">
+              <div class="iconBorder bg-dark">
+                <i class="fa-brands fa-twitter  py-3"></i>
+              </div>
+            </a>
+
+            <a href="#" class="text-decoration-none">
+              <div class="iconBorder bg-dark"><i class="fa-brands fa-google   py-3"></i></div>
+            </a>
+            <a href="#" class="text-decoration-none">
+              <div class="iconBorder bg-dark"><i class="fa-brands fa-google   py-3"></i></div>
+            </a>
+
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+    </div>
+
+  </footer>
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

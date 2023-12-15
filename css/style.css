@@ -1,0 +1,108 @@
+body{
+    color: #bfc1c8;
+    background-color: #1e202b;
+}
+
+.small{
+    font-size: 10px;
+}
+
+.logo{
+    width: 60px;
+}
+
+
+.navbar .nav-item .nav-link{
+    font-weight: 400;
+    padding: 5px 25px;
+    border-radius: 30px;
+    transition: all 0.3s ease 0s;
+}
+#homeLink{
+  border: solid 2px rgb(0,154,216);
+  border-radius: 30px;
+}
+
+.navbar .nav-item .nav-link:hover{
+    
+    color: rgb(0, 154, 216)!important;
+    border:rgb(0, 154, 216) solid 2px;
+}
+
+.navbar .nav-item {
+    margin-left:5px;
+}
+
+
+.weatherImg{
+    background-image: url("../images/banner.png");
+  
+    background-repeat: no-repeat;
+}
+#locationInput{
+    border: none;
+}
+.btn-find{
+    position: absolute;
+    bottom:7px;
+    right:7px;
+    background: #009ad8;
+    border: none;
+    color: white;
+}
+
+.todayHeader{
+    background: rgba(0, 0, 0, 0.9);
+}
+
+footer{
+    background: #262936;
+}
+.copyRight{
+    color: rgb(191, 193, 200);
+}
+
+.iconBorder{
+    margin-left: 5px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: rgb(0, 154, 216);
+}
+
+
+
+.todayHeader,.thirdDayHeader{
+    background: rgb(56, 60, 77);
+}
+.today,.thirdDay{
+    background: rgb(50, 53, 68);
+}
+.forecast-container{
+    margin-top: 50px!important;
+    margin-bottom: 50px!important;
+}
+
+.tomorrow{
+    background: rgb(38, 38, 49);
+
+}
+
+.tomorrowHeader{
+    background: #1e202b;
+}
+
+.custom{
+    color: #009ad8;
+}
+.num{
+    font-size: 5.4285714286rem;
+}
+
+.degr{
+    font-size: 1.7142857143em;
+    font-weight: 700;
+}
